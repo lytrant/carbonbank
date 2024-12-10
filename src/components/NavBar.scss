@@ -1,0 +1,38 @@
+@use "@/styles/variables.scss" as *; 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 12rem;
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #4caf50;
+        }
+  
+        &.active {
+          font-weight: bold;
+          color: #4caf50; /* Màu khi active */
+        }
+      }
+    }
+  }
+}
+
+/* Logo */
+.logo img {
+  width: 120px; /* Adjust the logo size */
+}
+
