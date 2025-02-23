@@ -3,10 +3,12 @@
 // Footer.jsx
 import React from "react";
 import "./Footer.scss";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+import { useTranslation } from "react-i18next";
 
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -22,26 +24,26 @@ const Footer = () => {
         <div style={{display: "flex"}}>
         {/* About Links */}
         <div className="footer__section">
-          <h3 className="footer__heading">About</h3>
+          <h3 className="footer__heading">{t('about')}</h3>
           <ul className="footer__links">
             <li>
-              <a href="#services">Services</a>
+              <a href="#services">{t('services')}</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects">{t('projects')}</a>
             </li>
             <li>
               <a href="#blog">Blog</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact">{t('contact')}</a>
             </li>
           </ul>
         </div>
 
         {/* Other Links */}
         <div className="footer__section">
-          <h3 className="footer__heading">Others</h3>
+          <h3 className="footer__heading">{t('others')}</h3>
           <ul className="footer__links">
             <li>
               <a href="#faq">FAQ</a>
@@ -50,7 +52,7 @@ const Footer = () => {
               <a href="#career">Career</a>
             </li>
             <li>
-              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#privacy-policy">{t('privacy')}</a>
             </li>
           </ul>
         </div>

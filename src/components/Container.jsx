@@ -2,6 +2,8 @@
 // import React from 'react';
 import './Container.scss';
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
+
 import background from '../assets/background.png';
 import img2 from '../assets/V.1.0-Website-Banner.png'
 import colImg1 from '../assets/End-to-End-Solution.png';
@@ -25,26 +27,27 @@ import carosel7 from '../assets/carosel7.png';
 import carosel8 from '../assets/carosel8.png';
 
 const Container = () => {
+
+  const { t } = useTranslation();
+
   const items = [
     {
       image: colImg1,
-      title: "End-to-End Solution",
-      description:
-        "A one-stop center for carbon crediting programs, from audits and registry to trading carbon credits.",
+      title: t('title3'),
+      description: t('desc3'),
     },
     {
       image: colImg2,
-      title: "Real-Time Project Monitoring",
-      description:
-        "Integrating satellite, ground sensor & inventory data to effectively monitor, analyze & manage real-time data.",
+      title: t('title4'),
+      description:t('desc4'),
     },
     {
       image: colImg3,
-      title: "High-Rating Carbon Credits",
-      description:
-        "Ensuring the best quality of carbon credits, giving the impact on value & price dynamics.",
+      title: t('title4'),
+      description: t('desc5'),
     },
   ];
+
 
   const logos = [caro1, caro2, caro3, caro4, caro5, caro6];
   const logos2 = [carosel1, carosel2, carosel3, carosel4, carosel5, carosel6, carosel7, carosel8];
@@ -76,21 +79,20 @@ const Container = () => {
 
 
   const stats = [
-    { value: "100+", label: "Total On Boarding Clients" },
-    { value: "50+", label: "Total Projects In Progress" },
-    { value: "13", label: "Total States Involved", sublabel: "(National)" },
-    { value: "3", label: "Total Nations Involved", sublabel: "(International)" },
+    { value: "100+", label: t('text1') },
+    { value: "50+", label: t('text2') },
+    { value: "13", label: t('text3') },
+    { value: "3", label: t('text4') },
   ];
 
   return (
     <>
       <section className="hero-section">
         <div className="hero-section__content">
-          <h1 className="hero-section__title">Towards A Sustainable Future</h1>
-          <p className="hero-section__description">
-            Carbon Bank is specializing in climate change and the management of carbon assets.
-          </p>
-          <button className="hero-section__button">Read More</button>
+
+          <h1 className="hero-section__title">{t('header1')}</h1>
+          <p className="hero-section__description">{t('title1')}</p>
+          <button className="hero-section__button">{t('buttonReadMore')}</button>
         </div>
         <div className="hero-section__image">
           <img src={background} alt="Sustainable Future" />
@@ -98,11 +100,9 @@ const Container = () => {
       </section>
       <section className="hero-section-2">
         <div className="hero-section-2__content">
-          <h1 className="hero-section-2__title">Who We Are?</h1>
-          <p className="hero-section-2__description">
-            Carbon Bank is pioneering a robust ecosystem that facilitates the management, trading, and monetization of carbon credits effectively. We provide comprehensive support throughout the carbon credit process, ensuring compliance and boosting visibility on top trading platforms, with expert guidance on certification and regulations. Integrate AI to ensure the best quality of carbon credits, giving the impact on value & price dynamics.
-          </p>
-          <button className="hero-section__button">Get Started</button>
+          <h1 className="hero-section-2__title">{t('header2')}</h1>
+          <p className="hero-section-2__description">{t('title2')}</p>
+          <button className="hero-section__button">{t('buttonGetStarted')}</button>
         </div>
         <div className="hero-section-2__image">
           <img src={img2} alt="Sustainable Future" />
@@ -111,7 +111,7 @@ const Container = () => {
       <section className="collection-section">
       </section>
       <section className="why-partner">
-        <h2 className="why-partner__title">Why Partner With Us?</h2>
+        <h2 className="why-partner__title">{t('header3')}</h2>
         <div className="why-partner__grid">
           {items.map((item, index) => (
             <div key={index} className="why-partner__item">
@@ -128,7 +128,7 @@ const Container = () => {
       </section>
 
       <section className="client-carousel">
-      <h2 className="client-carousel__title">Our Sustainable Clients</h2>
+      <h2 className="client-carousel__title">{t('header4')}</h2>
       <div className="client-carousel__slider">
         <div
           className="client-carousel__track"
@@ -157,7 +157,7 @@ const Container = () => {
       </section>
       
       <section className="stats-section">
-        <h2 className="stats-section__title">Green Projects Across Southeast Asia</h2>
+        <h2 className="stats-section__title">{t('header5')}</h2>
         <div className="stats-section__grid">
           {stats.map((stat, index) => (
             <div key={index} className="stats-section__item">
@@ -173,19 +173,19 @@ const Container = () => {
             <li class="elementor-icon-list-item">
               <span class="elementor-icon-list-icon">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>						</span>
-              <span class="elementor-icon-list-text">Nature-Based Projects</span>
+              <span class="elementor-icon-list-text">{t('text5')}</span>
             </li>
             <li class="elementor-icon-list-item">
               <span class="elementor-icon-list-icon">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" fill="red"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>        </span>
-              <span class="elementor-icon-list-text">Technology-Based Projects</span>
+              <span class="elementor-icon-list-text">{t('text6')}</span>
             </li>
           </ul>
         </div>
       </section>
 
       <section className="client-carousel">
-      <h2 className="client-carousel__title">Our Green Partners</h2>
+      <h2 className="client-carousel__title">{t('header6')}</h2>
       <div className="client-carousel__slider">
         <div
           className="client-carousel__track"
@@ -215,11 +215,11 @@ const Container = () => {
 
       <section className="hero-section" style={{height: '300px', margin: 0}}>
         <div className="hero-section__content" style={{display: "flex", justifyContent: 'center', left: '50%', flexDirection: 'column', maxWidth: 'max-content', transform: 'translate(-50%)'}}>
-          <h1 className="hero-section__title" style={{color: 'black'}}>Join Our Carbon Initiative          </h1>
+          <h1 className="hero-section__title" style={{color: 'black'}}>{t('header7')}</h1>
           <p className="hero-section__description" style={{color: 'black'}}>
-          Start your sustainability journey with Carbon Bank today!
+          {t('title6')}
           </p>
-          <button className="hero-section__button" style={{width: 'max-content', alignSelf: 'center'}}>Contact Us</button>
+          <button className="hero-section__button" style={{width: 'max-content', alignSelf: 'center'}}>{t('buttonContactUs')}</button>
         </div>
         {/* <div className="hero-section__image">
           <img src={lastImg} alt="Sustainable Future" />
