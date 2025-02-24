@@ -36,6 +36,8 @@
   "header7": "Join Our Carbon Initiative",
   "title6": "Start your sustainability journey with Carbon Bank today!",
 
+  "servicesPageHeader": "Climate Conservation Through Capitalism",
+  "servicesPageDesc": "Anytime",
   "servicesHeader1": "Carbon Registry",
   "servicesTitle1": "Carbon Bank is positioned to be at the forefront of carbon sequestration data collection, registration, and integration in Asia.",
   "servicesHeader2": "Carbon Trading",
@@ -46,7 +48,7 @@
   "servicesTitle5": "Removal Assets: Natural & Engineered",
   "servicesDuration1": "(Project Duration: 10-12 Months)",
   "servicesDuration2": "(Project Duration: 12-24 Months)",
-  "servicesDefinition": "Definition",
+  "servicesDefinition": "Definition: ",
   "servicesDesc1": "These plantations are typically organized and managed in a systematic manner, often with the goal of maximizing carbon sequestration.",
   "servicesType1": "Types of Plantations:",
   "servicesDesc1_1": "Oil Palm, Rubber Tree, Eucalyptus Tree, Pineapple Tree, Acacia Tree, Mangrove Tree, Durian Tree, Forest Plantation & more.",
@@ -57,5 +59,6 @@
   "servicesType3": "Types of Removal Projects:",
   "servicesDesc1_3": "Methane Capture, Energy Pallet, Biochar, Waste Management & more.",
   "servicesHeader4": "Carbon Certification Workflow"
+  
 
 }

@@ -1,0 +1,46 @@
+.asset-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  
+  .asset-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    .asset-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .asset-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    
+    .asset-duration {
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .asset-definition, .asset-types {
+      font-size: 14px;
+      color: #444;
+    }
+    
+    .asset-type-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  }
+}
